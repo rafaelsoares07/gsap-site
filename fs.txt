@@ -1,0 +1,26 @@
+   
+        <button class="btn-primary">Teste de botao estilos</button>
+        <button class="btn-primary lg">Teste de botao estilos</button>
+        <button class="btn-primary white lg">Teste de botao estilos</button>
+
+        <div class="item-digital">
+            <div class="icon">
+                <img src="imgs/woman-girl-svgrepo-com (1).svg" />
+            </div>
+            <div class="info">
+                <h6>Impacto digital</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consectetur placeat obcaecati omnis dolorem cum hic doloribus nihil fugiat iusto impedit quae, labore et quas exercitationem voluptatum, eligendi unde ea!</p>
+            </div>
+
+        </div>
+
+        <div class="card-post">
+            <span class="tag">Fundamentos</span>
+            <div class="image">
+                <img src="imgs/image-post.svg" alt="" srcset="">
+            </div>
+            <div class="text">
+                <h6>HTML 5 E SEMANTICA</h6>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatem minus adipisci fuga quaerat quas quidem similique reiciendis ducimus omnis perspiciatis eligendi accusantium soluta. Unde ab neque minima sunt rem.</p>
+            </div>
+        </div>

@@ -94,22 +94,31 @@ document.addEventListener("DOMContentLoaded", function (event) {
             onUpdate: (self) => {
                 const progress = self.progress;
 
-                if(progress>0.3){
+                if(progress>0.45){
                     document.querySelector('.painel-1').style.backgroundColor = "#fff";
                     document.querySelector('.painel-2').style.backgroundColor = "#000";
                     document.querySelector('.s-digital').style.color = "#000"
+                    document.querySelector('.s-colab').style.color = "#fff"                    
                     document.querySelector('.line-1').style.backgroundColor = "#000"
-                    document.querySelectorAll('.item-digital').forEach((el)=>{
+                    document.querySelector('.line-2').style.backgroundColor = "#fff"
+                    document.querySelectorAll('.item-digital-1').forEach((el)=>{
                         el.style.backgroundColor="#fff"
                     });
-
+                    document.querySelectorAll('.item-digital-2').forEach((el)=>{
+                        el.style.backgroundColor='rgba(20, 20, 20, 1)'
+                    });
                 }else{
                     document.querySelector('.painel-1').style.backgroundColor = "#000";
                     document.querySelector('.painel-2').style.backgroundColor = "#fff";
                     document.querySelector('.s-digital').style.color = "#fff"
+                    document.querySelector('.s-colab').style.color = "#000"                    
                     document.querySelector('.line-1').style.backgroundColor = "#fff"
-                    document.querySelectorAll('.item-digital').forEach((el)=>{
-                        el.style.backgroundColor="#fff"
+                    document.querySelector('.line-1').style.backgroundColor = "#000"
+                    document.querySelectorAll('.item-digital-1').forEach((el)=>{
+                        el.style.backgroundColor='rgba(20, 20, 20, 1)';
+                    });
+                    document.querySelectorAll('.item-digital-2').forEach((el)=>{
+                        el.style.backgroundColor='#fff'
                     });
 
 
@@ -120,5 +129,54 @@ document.addEventListener("DOMContentLoaded", function (event) {
             end: () => "+=" + window.innerWidth
         }
     })
+
+    // pode virar timeline
+    // gsap.to('.s-peoples',{
+    //     scrollTrigger: {
+    //         trigger: ".s-peoples",
+    //         pin: true,
+    //         scrub: 1, 
+    //         end:"+=1800",
+            
+    //     }
+    // })
+
+    // gsap.from(".text-animation", {
+    //     x: 500,
+    //     opacity: 0,
+    //     scrollTrigger: {
+    //       trigger: ".s-peoples",
+    //       start: "top top",
+    //       end: "+=1800",
+    //       scrub: 1
+    //     },
+    //     stagger: 0.2,
+    //     ease: "power2.out"
+    //   });
+
+
+    const tdl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".s-peoples",
+          start: "top top",
+          end: "+=1800",
+          scrub: 1,
+          pin: true,
+          // markers: true // ativa pra debugar se quiser
+        }
+      });
+      
+      tdl.from(".text-animation", {
+        x: 500,
+        opacity: 0,
+        stagger: 0.2,
+        ease: "power2.out"
+      }).to(".text-animation", {
+        opacity: 0,
+        x: -300,
+        stagger: 0.2,
+        ease: "power2.in"
+      });
+     
 
 });

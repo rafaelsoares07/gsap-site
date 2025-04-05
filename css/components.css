@@ -27,10 +27,18 @@
     background-color: var(--pink-20);
   }
   
-  .item-digital {
+  .item-digital-1 {
+   
     flex-grow: 1;
     max-width: 38.4rem;
     background-color: rgba(20,20,20,1);
+}
+
+.item-digital-2 {
+ 
+  flex-grow: 1;
+  max-width: 38.4rem;
+  background-color:"#fff";
 }
 
 .item-digital .icon {
